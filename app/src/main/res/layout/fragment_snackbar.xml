@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.one20.one20uilib.widget.UnisonEditText
+        android:id="@+id/snackbar_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hint="Snackbar text"
+        app:dark="true"/>
+
+    <com.one20.one20uilib.widget.UnisonButton
+        android:id="@+id/snackbar_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Snackbar"
+        style="@style/UnisonRaisedButton.Dark"/>
+
+    <com.one20.one20uilib.widget.UnisonButton
+        android:id="@+id/snackbar_button_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Show With Action"
+        style="@style/UnisonRaisedButton.Dark"/>
+
+</LinearLayout>

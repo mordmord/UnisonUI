@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/white">
+
+                <com.one20.one20uilib.widget.UnisonEditText
+                    android:id="@+id/light_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/switch_1"
+                    app:hint="Hint Text"
+                    app:errorText="An error has occurred"/>
+
+                <com.one20.one20uilib.widget.UnisonSwitch
+                    android:id="@+id/switch_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="16dp"
+                    app:errorText="An error has occurred"
+                    style="@style/UnisonSwitch.Light"/>
+
+            <com.one20.one20uilib.widget.UnisonEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/light_editText"
+                android:layout_marginTop="16dp"
+                app:hint="Hint Text"
+                app:headerLabel="Multi-line Light"
+                app:multiline="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/background_dark">
+
+            <com.one20.one20uilib.widget.UnisonEditText
+                android:id="@+id/dark_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/switch_2"
+                app:hint="Hint Text"
+                app:dark="true"
+                app:errorText="An error has occurred"/>
+
+            <com.one20.one20uilib.widget.UnisonSwitch
+                android:id="@+id/switch_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                style="@style/UnisonSwitch.Dark"/>
+
+            <com.one20.one20uilib.widget.UnisonEditText
+                android:id="@+id/multilineLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dark_editText"
+                android:layout_marginTop="16dp"
+                app:hint="Hint Text"
+                app:headerLabel="Multi-line Dark"
+                app:multiline="true"
+                app:dark="true"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/background_dark">
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

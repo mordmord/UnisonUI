@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="ripple_color">@color/light_grey</color>
+
+    <color name="background_dark">#1c1c1c</color>
+    <color name="background_light">#ffffff</color>
+
+
+    <!-- WIDGET COLORS -->
+    <color name="toolbar_black">#222222</color>
+    <color name="toolbar_gray">#4a4a4a</color>
+
+    <color name="color_unisonButtonYellow_enabled">@color/yellow</color>
+    <color name="color_unisonButtonYellow_disabled">#1ecccccc</color>
+    <color name="color_unisonButtonYellow_pressed">#88e8bb20</color>
+
+    <color name="color_unisonButtonOrange_enabled">@color/amber</color>
+    <color name="color_unisonButtonOrange_disabled">@color/light_grey</color>
+    <color name="color_unisonButtonOrange_pressed">@color/light_grey</color>
+
+
+
+    <!-- COLOR PALATTE -->
+    <color name="red">#d0011b</color>
+    <color name="amber">#f6a623</color>
+    <color name="yellow">#e7ba21</color>
+    <color name="green">#57b957</color>
+
+    <color name="dark_grey">#2c2c2c</color>
+    <color name="mid_grey_2">#4a4a4a</color>
+    <color name="mid_grey_1">#9b9b9b</color>
+    <color name="light_grey">#dddddd</color>
+    <color name="white">#ffffff</color>
+
+
+    <color name="error">#d50000</color>
+    <color name="error_dark">#ff6e6e</color>
+
+</resources>

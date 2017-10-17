@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <com.one20.one20uilib.widget.UnisonButton
+        android:id="@+id/light_date_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Light Date Picker"
+        style="@style/UnisonRaisedButton.Light"/>
+
+    <com.one20.one20uilib.widget.UnisonButton
+        android:id="@+id/dark_date_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Dark Date Picker"
+        style="@style/UnisonRaisedButton.Light"/>
+
+    <com.one20.one20uilib.widget.UnisonButton
+        android:id="@+id/light_time_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Light Time Picker"
+        style="@style/UnisonRaisedButton.Light"/>
+
+    <com.one20.one20uilib.widget.UnisonButton
+        android:id="@+id/dark_time_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Dark Time Picker"
+        style="@style/UnisonRaisedButton.Light"/>
+
+
+
+</LinearLayout>

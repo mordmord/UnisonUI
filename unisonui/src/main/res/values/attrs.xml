@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="UnisonEditText">
+        <attr name="dark" format="boolean"/>
+        <attr name="hint" format="string"/>
+        <attr name="text" format="string"/>
+        <attr name="errorText" format="string"/>
+        <attr name="errorEnabled" format="boolean"/>
+        <attr name="headerLabel" format="string"/>
+        <attr name="multiline" format="boolean"/>
+    </declare-styleable>
+
+    
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/fragment_button"
+            android:title="Buttons" />
+        <item
+            android:id="@+id/fragment_switches_sliders"
+            android:title="Switches &amp; Sliders" />
+        <item
+            android:id="@+id/fragment_textviews"
+            android:title="Text Layouts" />
+        <item
+            android:id="@+id/fragment_snackbar"
+            android:title="Snackbars" />
+        <item
+            android:id="@+id/fragment_dialogs"
+            android:title="Dialogs" />
+        <item
+            android:id="@+id/fragment_bars"
+            android:title="Bars" />
+        <item
+            android:id="@+id/fragment_pickers"
+            android:title="Pickers" />
+
+        <item
+            android:id="@+id/fragment_lists"
+            android:title="Lists" />
+
+        <item
+            android:id="@+id/fragment_splatter_textview"
+            android:title="Splatter TextView"/>
+
+        <item
+            android:id="@+id/fragment_progress"
+            android:title="Progress" />
+    </group>
+
+</menu>

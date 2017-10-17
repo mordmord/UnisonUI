@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--                    -->
+    <!-- APPLICATION THEMES -->
+    <!--                    -->
+    <style name="UnisonApplicationTheme" parent="Theme.AppCompat.NoActionBar"/>
+
+    <style name="UnisonApplicationTheme.Dark">
+        <item name="android:colorPrimary">@color/background_dark</item>
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="colorAccent">@color/yellow</item>
+    </style>
+
+    <style name="UnisonApplicationTheme.Light">
+        <item name="android:colorPrimary">@color/background_light</item>
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="colorAccent">@color/amber</item>
+    </style>
+
+
+
+
+
+
+    <!--                        -->
+    <!--    COMPONENT STYLES    -->
+    <!--                        -->
+
+    <!-- TOOLBAR    -->
+    <style name="UnisonToolbar"/>
+
+    <style name="UnisonToolbar.Dark">
+        <item name="android:background">@color/toolbar_black</item>
+    </style>
+
+    <style name="UnisonToolbar.Light">
+        <item name="android:background">@color/toolbar_gray</item>
+    </style>
+
+
+
+
+    <!-- BUTTONS -->
+    <style name="UnisonRaisedButton" parent="@style/UnisonTextButton"/>
+
+    <style name="UnisonFlatButton" parent="@style/UnisonTextButton">
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+
+    <style name="UnisonRaisedButton.Light">
+        <item name="android:background">@drawable/selector_raised_orange_button_background</item>
+        <item name="android:textColor">@color/selector_button_orange_raised_text</item>
+    </style>
+
+    <style name="UnisonRaisedButton.Dark">
+        <item name="android:background">@drawable/selector_raised_yellow_button_background</item>
+        <item name="android:textColor">@color/selector_button_yellow_raised_text</item>
+    </style>
+
+
+    <style name="UnisonFlatButton.Dark">
+        <item name="android:background">@drawable/selector_flat_yellow_button_background</item>
+        <item name="android:textColor">@color/selector_button_yellow_flat_text</item>
+    </style>
+
+    <style name="UnisonFlatButton.Light">
+        <item name="android:background">@drawable/selector_flat_orange_button_background</item>
+        <item name="android:textColor">@color/selector_button_orange_flat_text</item>
+    </style>
+
+
+
+
+
+    <!-- SWITCHES -->
+    <style name="UnisonSwitch"/>
+
+    <style name="UnisonSwitch.Light">
+        <item name="colorAccent">@color/amber</item>
+        <item name="android:colorForeground">#42221f1f</item>
+        <item name="android:textColor">#85010101</item>
+        <item name="android:theme">@style/UnisonSwitch.Light</item>
+    </style>
+
+    <style name="UnisonSwitch.Dark">
+        <item name="colorAccent">@color/yellow</item>
+        <item name="android:colorForeground">#4cffffff</item>
+        <item name="android:textColor">#b2ffffff</item>
+        <item name="android:theme">@style/UnisonSwitch.Dark</item>
+    </style>
+
+
+
+
+    <!-- CHECKBOXES -->
+    <style name="UnisonCheckbox"/>
+
+    <style name="UnisonCheckbox.Light">
+        <item name="colorAccent">@color/amber</item>
+        <item name="android:colorControlNormal">#85010101</item>
+        <item name="android:textColor">#85010101</item>
+        <item name="android:theme">@style/UnisonCheckbox.Light</item>
+    </style>
+
+    <style name="UnisonCheckbox.Dark">
+        <item name="colorAccent">@color/yellow</item>
+        <item name="android:colorControlNormal">#b2ffffff</item>
+        <item name="android:textColor">#b2ffffff</item>
+        <item name="android:theme">@style/UnisonCheckbox.Dark</item>
+    </style>
+
+
+
+
+    <!-- RADIO BUTTONS -->
+    <style name="UnisonRadioButton"/>
+
+    <style name="UnisonRadioButton.Light">
+        <item name="colorControlActivated">@color/amber</item>
+        <item name="colorControlNormal">#85010101</item>
+        <item name="android:textColor">#85010101</item>
+        <item name="android:theme">@style/UnisonRadioButton.Light</item>
+    </style>
+
+    <style name="UnisonRadioButton.Dark">
+        <item name="colorControlActivated">@color/yellow</item>
+        <item name="colorControlNormal">#b2ffffff</item>
+        <item name="android:textColor">#b2ffffff</item>
+        <item name="android:theme">@style/UnisonRadioButton.Dark</item>
+    </style>
+
+
+
+
+    <!-- SEEK BARS -->
+    <style name="UnisonSeekbar"/>
+
+    <style name="UnisonSeekbar.Light" parent="@style/Widget.AppCompat.SeekBar">
+        <item name="android:colorControlActivated">@color/amber</item>
+        <item name="android:colorControlNormal">#85010101</item>
+        <item name="android:textColor">#85010101</item>
+        <item name="android:theme">@style/UnisonSeekbar.Light</item>
+    </style>
+
+    <style name="UnisonSeekbar.Dark" parent="@style/Widget.AppCompat.SeekBar">
+        <item name="android:colorControlActivated">@color/yellow</item>
+        <item name="android:colorControlNormal">#b2ffffff</item>
+        <item name="android:textColor">#b2ffffff</item>
+        <item name="android:theme">@style/UnisonSeekbar.Dark</item>
+    </style>
+
+
+
+
+
+    <!-- EDIT TEXT -->
+    <style name="UnisonEditText">
+        <item name="android:textSize">@dimen/textsize_edittext</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="UnisonEditText.Light">
+        <item name="android:backgroundTint">@color/selector_edittext_background_tint</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textColorHint">@color/mid_grey_1</item>
+        <item name="android:theme">@style/UnisonEditText.Light</item>
+    </style>
+
+    <style name="UnisonEditText.Dark">
+        <item name="android:backgroundTint">@color/selector_edittext_background_tint_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">#7fffffff</item>
+        <item name="android:theme">@style/UnisonEditText.Dark</item>
+    </style>
+
+
+
+    <!-- ALERT DIALOGS -->
+    <style name="UnisonAlertDialog"  parent="@android:style/Theme.Material.Dialog.Alert">
+        <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <style name="UnisonAlertDialog.Light">
+        <item name="android:background">@color/white</item>
+        <item name="android:colorAccent">@color/amber</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/mid_grey_1</item>
+    </style>
+
+
+    <style name="UnisonAlertDialog.Dark">
+        <item name="android:background">@color/background_dark</item>
+        <item name="android:colorAccent">@color/amber</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorPrimary">@color/mid_grey_1</item>
+    </style>
+
+
+    <!-- PICKER DIALOG  -->
+    <style name="UnisonPickerDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+        <item name="android:textColorPrimary">#dd000000</item>
+    </style>
+
+    <style name="UnisonPickerDialog.Light">
+        <item name="colorAccent">@color/amber</item>
+    </style>
+
+    <style name="UnisonPickerDialog.Dark">
+        <item name="colorAccent">@color/yellow</item>
+    </style>
+
+
+
+
+
+
+    <!--                   -->
+    <!--    TEXT STYLES    -->
+    <!--                   -->
+
+    <style name="UnisonErrorText">
+        <item name="android:textSize">@dimen/textsize_edittext_error</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+
+    <style name="UnisonErrorText.Light">
+        <item name="android:textColor">@color/error</item>
+    </style>
+
+    <style name="UnisonErrorText.Dark">
+        <item name="android:textColor">@color/error_dark</item>
+    </style>
+
+    <style name="UnisonHeaderLabel">
+        <item name="android:textSize">@dimen/textsize_edittext_headerlabel</item>
+    </style>
+
+
+    <style name="UnisonHeaderLabel.Light">
+        <item name="android:textColor">@color/mid_grey_1</item>
+    </style>
+
+    <style name="UnisonHeaderLabel.Dark">
+        <item name="android:textColor">#7fffffff</item>
+    </style>
+
+
+    <style name="UnisonTextHeadline">
+        <item name="android:textSize">@dimen/textsize_20</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="UnisonTextTitle">
+        <item name="android:textSize">@dimen/textsize_20</item>
+    </style>
+
+    <style name="UnisonTextSubheader">
+        <item name="android:textSize">@dimen/textsize_16</item>
+    </style>
+
+    <style name="UnisonTextSubheaderPOI">
+        <item name="android:textSize">@dimen/textsize_18</item>
+    </style>
+
+    <style name="UnisonTextBody2">
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="UnisonTextBody1">
+        <item name="android:textSize">@dimen/textsize_14</item>
+    </style>
+
+    <style name="UnisonTextCaption">
+        <item name="android:textSize">@dimen/textsize_12</item>
+    </style>
+
+    <style name="UnisonTextButton">
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    
+    <style name="UnisonListItemHeader">
+        <item name="android:textSize">@dimen/textsize_16</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="UnisonListSecondaryText">
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:textColor">@color/mid_grey_1</item>
+    </style>
+
+</resources>

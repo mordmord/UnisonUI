@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    
+    <com.one20.one20uilib.widget.UnisonSplatterTextView
+        android:id="@+id/splatter_text"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <com.one20.one20uilib.widget.UnisonEditText
+        android:id="@+id/splatter_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dark="true"
+        app:hint="Enter text"/>
+
+</LinearLayout>
