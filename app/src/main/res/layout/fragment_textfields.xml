@@ -18,7 +18,7 @@
             android:padding="16dp"
             android:background="@color/white">
 
-                <com.one20.one20uilib.widget.UnisonEditText
+                <com.one20.unisonui.widget.UnisonEditText
                     android:id="@+id/light_editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
                     app:hint="Hint Text"
                     app:errorText="An error has occurred"/>
 
-                <com.one20.one20uilib.widget.UnisonSwitch
+                <com.one20.unisonui.widget.UnisonSwitch
                     android:id="@+id/switch_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
                     app:errorText="An error has occurred"
                     style="@style/UnisonSwitch.Light"/>
 
-            <com.one20.one20uilib.widget.UnisonEditText
+            <com.one20.unisonui.widget.UnisonEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/light_editText"
@@ -53,7 +53,7 @@
             android:padding="16dp"
             android:background="@color/background_dark">
 
-            <com.one20.one20uilib.widget.UnisonEditText
+            <com.one20.unisonui.widget.UnisonEditText
                 android:id="@+id/dark_editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                 app:dark="true"
                 app:errorText="An error has occurred"/>
 
-            <com.one20.one20uilib.widget.UnisonSwitch
+            <com.one20.unisonui.widget.UnisonSwitch
                 android:id="@+id/switch_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                 android:layout_marginStart="16dp"
                 style="@style/UnisonSwitch.Dark"/>
 
-            <com.one20.one20uilib.widget.UnisonEditText
+            <com.one20.unisonui.widget.UnisonEditText
                 android:id="@+id/multilineLight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

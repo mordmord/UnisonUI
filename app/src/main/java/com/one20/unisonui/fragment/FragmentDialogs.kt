@@ -6,7 +6,7 @@ import android.view.*
 import android.widget.Toast
 import com.one20.one20ui.R
 import com.one20.one20ui.activity.BaseActivity
-import com.one20.one20uilib.widget.UnisonButton
+import com.one20.unisonui.widget.UnisonButton
 import com.one20.unisonui.dialog.UnisonDialog
 
 /**

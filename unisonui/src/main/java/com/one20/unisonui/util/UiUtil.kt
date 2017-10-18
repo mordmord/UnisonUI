@@ -1,4 +1,4 @@
-package com.one20.one20uilib.util
+package com.one20.unisonui.util
 
 import android.content.Context
 import android.util.DisplayMetrics

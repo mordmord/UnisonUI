@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <com.one20.one20uilib.widget.UnisonButton
+    <com.one20.unisonui.widget.UnisonButton
         android:id="@+id/light_date_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,7 +13,7 @@
         android:text="Light Date Picker"
         style="@style/UnisonRaisedButton.Light"/>
 
-    <com.one20.one20uilib.widget.UnisonButton
+    <com.one20.unisonui.widget.UnisonButton
         android:id="@+id/dark_date_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
         android:text="Dark Date Picker"
         style="@style/UnisonRaisedButton.Light"/>
 
-    <com.one20.one20uilib.widget.UnisonButton
+    <com.one20.unisonui.widget.UnisonButton
         android:id="@+id/light_time_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         android:text="Light Time Picker"
         style="@style/UnisonRaisedButton.Light"/>
 
-    <com.one20.one20uilib.widget.UnisonButton
+    <com.one20.unisonui.widget.UnisonButton
         android:id="@+id/dark_time_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -5,21 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.one20.one20uilib.widget.UnisonEditText
+    <com.one20.unisonui.widget.UnisonEditText
         android:id="@+id/snackbar_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:hint="Snackbar text"
         app:dark="true"/>
 
-    <com.one20.one20uilib.widget.UnisonButton
+    <com.one20.unisonui.widget.UnisonButton
         android:id="@+id/snackbar_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Show Snackbar"
         style="@style/UnisonRaisedButton.Dark"/>
 
-    <com.one20.one20uilib.widget.UnisonButton
+    <com.one20.unisonui.widget.UnisonButton
         android:id="@+id/snackbar_button_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

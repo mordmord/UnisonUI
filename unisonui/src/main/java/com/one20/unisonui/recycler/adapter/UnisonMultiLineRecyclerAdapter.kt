@@ -1,4 +1,4 @@
-package com.one20.one20uilib.recycler.adapter
+package com.one20.unisonui.recycler.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.one20.one20uilib.recycler.viewholder.UnisonMultiLineViewHolder
+import com.one20.unisonui.recycler.viewholder.UnisonMultiLineViewHolder
 import com.one20.unisonui.recycler.ItemClickListener
 import com.one20.unisonui.recycler.model.UnisonRecyclerItemModel
 

@@ -16,13 +16,13 @@
             android:orientation="vertical"
             android:background="@color/background_dark">
 
-            <com.one20.one20uilib.widget.UnisonButton
+            <com.one20.unisonui.widget.UnisonButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Raised Enabled"
                 style="@style/UnisonRaisedButton.Dark"/>
 
-            <com.one20.one20uilib.widget.UnisonButton
+            <com.one20.unisonui.widget.UnisonButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -30,14 +30,14 @@
                 android:enabled="false"
                 style="@style/UnisonRaisedButton.Dark"/>
 
-            <com.one20.one20uilib.widget.UnisonButton
+            <com.one20.unisonui.widget.UnisonButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="Flat Enabled"
                 style="@style/UnisonFlatButton.Dark"/>
 
-            <com.one20.one20uilib.widget.UnisonButton
+            <com.one20.unisonui.widget.UnisonButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -54,13 +54,13 @@
             android:orientation="vertical"
             android:background="@color/white">
 
-            <com.one20.one20uilib.widget.UnisonButton
+            <com.one20.unisonui.widget.UnisonButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Raised Enabled"
                 style="@style/UnisonRaisedButton.Light"/>
 
-            <com.one20.one20uilib.widget.UnisonButton
+            <com.one20.unisonui.widget.UnisonButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -68,14 +68,14 @@
                 android:enabled="false"
                 style="@style/UnisonRaisedButton.Light"/>
 
-            <com.one20.one20uilib.widget.UnisonButton
+            <com.one20.unisonui.widget.UnisonButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="Flat Enabled"
                 style="@style/UnisonFlatButton.Light"/>
 
-            <com.one20.one20uilib.widget.UnisonButton
+            <com.one20.unisonui.widget.UnisonButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"

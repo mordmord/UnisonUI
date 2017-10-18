@@ -9,8 +9,8 @@ import android.widget.DatePicker
 import android.widget.TimePicker
 import com.one20.one20ui.R
 import com.one20.one20ui.activity.BaseActivity
-import com.one20.one20uilib.widget.UnisonButton
-import com.one20.one20uilib.widget.UnisonPicker
+import com.one20.unisonui.widget.UnisonButton
+import com.one20.unisonui.widget.UnisonPicker
 
 /**
  * Created by ryanmord on 9/21/17.

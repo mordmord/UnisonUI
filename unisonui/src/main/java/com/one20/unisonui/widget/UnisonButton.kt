@@ -1,11 +1,11 @@
-package com.one20.one20uilib.widget
+package com.one20.unisonui.widget
 
 import android.content.Context
 import android.graphics.Typeface
 import android.util.AttributeSet
 import android.widget.Button
-import com.one20.one20uilib.util.UiUtil
-import com.one20.one20uilib.util.FontUtil
+import com.one20.unisonui.util.FontUtil
+import com.one20.unisonui.util.UiUtil
 
 
 /**

@@ -1,4 +1,4 @@
-package com.one20.one20uilib.bars
+package com.one20.unisonui.bars
 
 import android.annotation.SuppressLint
 import android.content.Context

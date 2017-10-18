@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.*
 import com.one20.one20ui.R
 import com.one20.one20ui.activity.BaseActivity
-import com.one20.one20uilib.widget.UnisonEditText
-import com.one20.one20uilib.widget.UnisonSwitch
+import com.one20.unisonui.widget.UnisonEditText
+import com.one20.unisonui.widget.UnisonSwitch
 
 /**
  * Created by ryanmord on 9/14/17.

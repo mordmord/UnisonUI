@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.view.*
 import com.one20.one20ui.R
 import com.one20.one20ui.activity.BaseActivity
-import com.one20.one20uilib.widget.UnisonButton
-import com.one20.one20uilib.widget.UnisonEditText
-import com.one20.one20uilib.widget.UnisonSnackBar
+import com.one20.unisonui.widget.UnisonButton
+import com.one20.unisonui.widget.UnisonEditText
+import com.one20.unisonui.widget.UnisonSnackBar
 
 /**
  * Created by ryanmord on 9/15/17.

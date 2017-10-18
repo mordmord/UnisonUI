@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import com.one20.unisonui.R
+import com.one20.unisonui.util.UiUtil
 
 /**
  * Created by ryanmord on 9/29/17.
@@ -18,8 +19,8 @@ class UnisonSimpleRecyclerDivider(context: Context): android.support.v7.widget.R
     /**
      * padding
      */
-    private var mPaddingStart: Int  = com.one20.one20uilib.util.UiUtil.Companion.convertDpToPx(context, 32)
-    private var mPaddingEnd: Int    = com.one20.one20uilib.util.UiUtil.Companion.convertDpToPx(context, 0)
+    private var mPaddingStart: Int  = UiUtil.Companion.convertDpToPx(context, 32)
+    private var mPaddingEnd: Int    = UiUtil.Companion.convertDpToPx(context, 0)
 
 
 

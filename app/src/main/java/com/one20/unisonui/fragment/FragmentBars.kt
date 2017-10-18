@@ -6,9 +6,9 @@ import android.view.*
 import android.widget.Toast
 import com.one20.one20ui.R
 import com.one20.one20ui.activity.BaseActivity
-import com.one20.one20uilib.bars.UnisonBottomBar
-import com.one20.one20uilib.bars.UnisonBottomBarItem
-import com.one20.one20uilib.bars.UnisonSearchNavBar
+import com.one20.unisonui.bars.UnisonBottomBar
+import com.one20.unisonui.bars.UnisonBottomBarItem
+import com.one20.unisonui.bars.UnisonSearchNavBar
 
 /**
  * Created by ryanmord on 9/19/17.

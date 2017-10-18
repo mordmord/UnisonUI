@@ -9,8 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.one20.one20ui.R
-import com.one20.one20uilib.recycler.adapter.UnisonMultiLineRecyclerAdapter
-import com.one20.one20uilib.recycler.adapter.UnisonSingleLineRecyclerAdapter
+import com.one20.unisonui.recycler.adapter.UnisonMultiLineRecyclerAdapter
+import com.one20.unisonui.recycler.adapter.UnisonSingleLineRecyclerAdapter
 import com.one20.unisonui.recycler.ItemClickListener
 import com.one20.unisonui.recycler.decorator.UnisonSimpleRecyclerDivider
 import com.one20.unisonui.recycler.model.UnisonRecyclerItemModel

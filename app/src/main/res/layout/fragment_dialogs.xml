@@ -5,14 +5,14 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <com.one20.one20uilib.widget.UnisonButton
+    <com.one20.unisonui.widget.UnisonButton
         android:id="@+id/show_dialog_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Show Dialog"
         style="@style/UnisonRaisedButton.Dark"/>
 
-    <com.one20.one20uilib.widget.UnisonButton
+    <com.one20.unisonui.widget.UnisonButton
         android:id="@+id/show_with_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         android:text="Show With Title"
         style="@style/UnisonRaisedButton.Dark"/>
 
-    <com.one20.one20uilib.widget.UnisonButton
+    <com.one20.unisonui.widget.UnisonButton
         android:id="@+id/show_with_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.one20.one20ui.R
-import com.one20.one20uilib.widget.UnisonButton
+import com.one20.unisonui.widget.UnisonButton
 
 /**
  * Created by ryanmord on 10/9/17.

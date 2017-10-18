@@ -8,12 +8,12 @@
     android:focusable="true"
     android:focusableInTouchMode="true">
     
-    <com.one20.one20uilib.widget.UnisonSplatterTextView
+    <com.one20.unisonui.widget.UnisonSplatterTextView
         android:id="@+id/splatter_text"
         android:layout_width="match_parent"
         android:layout_height="80dp"/>
 
-    <com.one20.one20uilib.widget.UnisonEditText
+    <com.one20.unisonui.widget.UnisonEditText
         android:id="@+id/splatter_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

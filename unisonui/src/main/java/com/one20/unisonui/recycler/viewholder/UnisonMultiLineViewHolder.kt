@@ -1,4 +1,4 @@
-package com.one20.one20uilib.recycler.viewholder
+package com.one20.unisonui.recycler.viewholder
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView

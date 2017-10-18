@@ -1,4 +1,4 @@
-package com.one20.one20uilib.widget
+package com.one20.unisonui.widget
 
 import android.content.Context
 import android.support.design.widget.TextInputEditText
