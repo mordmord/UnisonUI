@@ -9,6 +9,7 @@
         <attr name="errorEnabled" format="boolean"/>
         <attr name="headerLabel" format="string"/>
         <attr name="multiline" format="boolean"/>
+        <attr name="android:inputType"/>
     </declare-styleable>
 
     

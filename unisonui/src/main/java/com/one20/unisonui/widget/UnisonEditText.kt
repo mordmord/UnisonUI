@@ -7,6 +7,7 @@ import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -64,6 +65,7 @@ class UnisonEditText(context: Context, attrs: AttributeSet) : LinearLayout(conte
         val errorText: String?
         val headerText: String?
         val multiline: Boolean?
+        val inputType: Int?
 
         try {
             val dark = a.getBoolean(R.styleable.UnisonEditText_dark, false)
@@ -73,6 +75,7 @@ class UnisonEditText(context: Context, attrs: AttributeSet) : LinearLayout(conte
             errorText       = a.getNonResourceString(R.styleable.UnisonEditText_errorText)
             headerText      = a.getNonResourceString(R.styleable.UnisonEditText_headerLabel)
             multiline       = a.getBoolean(R.styleable.UnisonEditText_multiline, false)
+            inputType       = a.getInt(R.styleable.UnisonEditText_android_inputType, EditorInfo.TYPE_TEXT_VARIATION_NORMAL)
             mErrorEnabled   = a.getBoolean(R.styleable.UnisonEditText_errorEnabled, false)
 
             if(dark) {
@@ -98,6 +101,7 @@ class UnisonEditText(context: Context, attrs: AttributeSet) : LinearLayout(conte
         mEditText.hint = hint
         mEditText.setText(text)
         mEditText.setSingleLine(!multiline!!)
+        mEditText.inputType = inputType!!
 
         mErrorText.text = errorText
         setErrorEnabled(mErrorEnabled)

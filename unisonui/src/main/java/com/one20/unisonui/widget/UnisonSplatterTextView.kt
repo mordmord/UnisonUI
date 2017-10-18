@@ -48,6 +48,8 @@ class UnisonSplatterTextView : AutofitTextView {
         setMinTextSize(24)
         setTextColor(resources.getColor(R.color.black))
 
+        setAllCaps(true)
+
         val dinCondBold = FontUtil.dinCondBold(mContext)
         typeface = dinCondBold
 
