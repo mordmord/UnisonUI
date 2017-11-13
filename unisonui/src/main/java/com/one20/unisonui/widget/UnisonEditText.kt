@@ -75,7 +75,7 @@ class UnisonEditText(context: Context, attrs: AttributeSet) : LinearLayout(conte
             errorText       = a.getNonResourceString(R.styleable.UnisonEditText_errorText)
             headerText      = a.getNonResourceString(R.styleable.UnisonEditText_headerLabel)
             multiline       = a.getBoolean(R.styleable.UnisonEditText_multiline, false)
-            inputType       = a.getInt(R.styleable.UnisonEditText_android_inputType, EditorInfo.TYPE_TEXT_VARIATION_NORMAL)
+            inputType       = a.getInt(R.styleable.UnisonEditText_android_inputType, EditorInfo.TYPE_TEXT_FLAG_AUTO_CORRECT)
             mErrorEnabled   = a.getBoolean(R.styleable.UnisonEditText_errorEnabled, false)
 
             if(dark) {
