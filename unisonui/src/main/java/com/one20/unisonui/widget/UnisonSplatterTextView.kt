@@ -37,7 +37,7 @@ class UnisonSplatterTextView : AutofitTextView {
      * Initialize and format view and layout
      */
     private fun initialize() {
-        val padding = UiUtil.convertDpToPx(mContext, 16)
+        val padding = UiUtil.convertDpToPixels(mContext, 16)
         setPadding(padding, 0, padding, 0)
 
         background = resources.getDrawable(R.drawable.small_splatter_white)

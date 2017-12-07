@@ -66,8 +66,8 @@ class UnisonButton : Button {
      */
     private fun initialize() {
 
-        val hPadding = UiUtil.convertDpToPx(mContext, HORIZONTAL_PADDING)
-        val vPadding = UiUtil.convertDpToPx(mContext, VERTICAL_PADDING)
+        val hPadding = UiUtil.convertDpToPixels(mContext, HORIZONTAL_PADDING)
+        val vPadding = UiUtil.convertDpToPixels(mContext, VERTICAL_PADDING)
 
         setPadding(hPadding, vPadding, hPadding, vPadding)
 

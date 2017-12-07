@@ -19,8 +19,8 @@ class UnisonSimpleRecyclerDivider(context: Context): android.support.v7.widget.R
     /**
      * padding
      */
-    private var mPaddingStart: Int  = UiUtil.Companion.convertDpToPx(context, 32)
-    private var mPaddingEnd: Int    = UiUtil.Companion.convertDpToPx(context, 0)
+    private var mPaddingStart: Int  = UiUtil.Companion.convertDpToPixels(context, 32)
+    private var mPaddingEnd: Int    = UiUtil.Companion.convertDpToPixels(context, 0)
 
 
 

@@ -11,7 +11,7 @@ import android.util.DisplayMetrics
 class UiUtil {
 
     companion object {
-        fun convertDpToPx(context: Context, dp: Int): Int {
+        fun convertDpToPixels(context: Context, dp: Int): Int {
             val displayMetrics = context.resources.displayMetrics
             return Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT))
         }

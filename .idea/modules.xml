@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Unison.iml" filepath="$PROJECT_DIR$/Unison.iml" />
       <module fileurl="file://$PROJECT_DIR$/UnisonT.iml" filepath="$PROJECT_DIR$/UnisonT.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unisoninfrastructure/unisoninfrastructure.iml" filepath="$PROJECT_DIR$/unisoninfrastructure/unisoninfrastructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/unisonui/unisonui.iml" filepath="$PROJECT_DIR$/unisonui/unisonui.iml" />
     </modules>
   </component>
