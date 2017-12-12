@@ -101,14 +101,14 @@
 
     <style name="UnisonCheckbox.Light">
         <item name="colorAccent">@color/amber</item>
-        <item name="android:colorControlNormal">#85010101</item>
+        <item name="colorControlNormal">#85010101</item>
         <item name="android:textColor">#85010101</item>
         <item name="android:theme">@style/UnisonCheckbox.Light</item>
     </style>
 
     <style name="UnisonCheckbox.Dark">
         <item name="colorAccent">@color/yellow</item>
-        <item name="android:colorControlNormal">#b2ffffff</item>
+        <item name="colorControlNormal">#b2ffffff</item>
         <item name="android:textColor">#b2ffffff</item>
         <item name="android:theme">@style/UnisonCheckbox.Dark</item>
     </style>
@@ -140,15 +140,15 @@
     <style name="UnisonSeekbar"/>
 
     <style name="UnisonSeekbar.Light" parent="@style/Widget.AppCompat.SeekBar">
-        <item name="android:colorControlActivated">@color/amber</item>
-        <item name="android:colorControlNormal">#85010101</item>
+        <item name="colorControlActivated">@color/amber</item>
+        <item name="colorControlNormal">#85010101</item>
         <item name="android:textColor">#85010101</item>
         <item name="android:theme">@style/UnisonSeekbar.Light</item>
     </style>
 
     <style name="UnisonSeekbar.Dark" parent="@style/Widget.AppCompat.SeekBar">
-        <item name="android:colorControlActivated">@color/yellow</item>
-        <item name="android:colorControlNormal">#b2ffffff</item>
+        <item name="colorControlActivated">@color/yellow</item>
+        <item name="colorControlNormal">#b2ffffff</item>
         <item name="android:textColor">#b2ffffff</item>
         <item name="android:theme">@style/UnisonSeekbar.Dark</item>
     </style>
@@ -164,14 +164,14 @@
     </style>
 
     <style name="UnisonEditText.Light">
-        <item name="android:backgroundTint">@color/selector_edittext_background_tint</item>
+        <item name="backgroundTint">@color/selector_edittext_background_tint</item>
         <item name="android:textColor">@color/dark_grey</item>
         <item name="android:textColorHint">@color/mid_grey_1</item>
         <item name="android:theme">@style/UnisonEditText.Light</item>
     </style>
 
     <style name="UnisonEditText.Dark">
-        <item name="android:backgroundTint">@color/selector_edittext_background_tint_dark</item>
+        <item name="backgroundTint">@color/selector_edittext_background_tint_dark</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textColorHint">#7fffffff</item>
         <item name="android:theme">@style/UnisonEditText.Dark</item>
@@ -180,14 +180,14 @@
 
 
     <!-- ALERT DIALOGS -->
-    <style name="UnisonAlertDialog"  parent="@android:style/Theme.Material.Dialog.Alert">
+    <style name="UnisonAlertDialog"  parent="Base.Theme.AppCompat.Dialog.Alert">
         <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
         <item name="android:windowExitAnimation">@anim/slide_out_down</item>
     </style>
 
     <style name="UnisonAlertDialog.Light">
         <item name="android:background">@color/white</item>
-        <item name="android:colorAccent">@color/amber</item>
+        <item name="colorAccent">@color/amber</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textColorPrimary">@color/mid_grey_1</item>
     </style>
@@ -195,7 +195,7 @@
 
     <style name="UnisonAlertDialog.Dark">
         <item name="android:background">@color/background_dark</item>
-        <item name="android:colorAccent">@color/amber</item>
+        <item name="colorAccent">@color/amber</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textColorPrimary">@color/mid_grey_1</item>
     </style>
@@ -206,6 +206,7 @@
         <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
         <item name="android:windowExitAnimation">@anim/slide_out_down</item>
         <item name="android:textColorPrimary">#dd000000</item>
+        <item name="android:background">@color/transparent</item>
     </style>
 
     <style name="UnisonPickerDialog.Light">

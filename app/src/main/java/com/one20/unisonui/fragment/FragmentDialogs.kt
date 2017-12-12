@@ -20,10 +20,6 @@ class FragmentDialogs: Fragment() {
     lateinit var mShowWithTitleButton: UnisonButton
     lateinit var mShowWithViewButton: UnisonButton
 
-    val messageBody: String = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna wirl aliqua. Up exlaborum incididunt."
-    val posText: String = "Positive"
-    val negText: String = "Negative"
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,26 +28,26 @@ class FragmentDialogs: Fragment() {
     }
 
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        val v = inflater!!.inflate(R.layout.fragment_dialogs, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        val v = inflater.inflate(R.layout.fragment_dialogs, container, false)
 
         mShowDialogButton       = v.findViewById(R.id.show_dialog_button)
         mShowWithTitleButton    = v.findViewById(R.id.show_with_title)
         mShowWithViewButton     = v.findViewById(R.id.show_with_view)
 
         mShowDialogButton.setOnClickListener({
-            val d = UnisonDialog.create(activity, messageBody, false, negText, posText, this::negativeClick, this::positiveClick)
+            val d = UnisonDialog.create(activity, R.string.test_message_body, false, R.string.test_negative_button, R.string.test_positive_button, this::negativeClick, this::positiveClick)
             d.show()
         })
 
         mShowWithTitleButton.setOnClickListener({
-            val d = UnisonDialog.createWithTitle(activity, "This is a title", messageBody, true, negText, posText, this::negativeClick, this::positiveClick)
+            val d = UnisonDialog.createWithTitle(activity, R.string.test_title, R.string.test_message_body, true, R.string.test_negative_button, R.string.test_positive_button, this::negativeClick, this::positiveClick)
             d.show()
         })
 
         mShowWithViewButton.setOnClickListener({
-            val d = UnisonDialog.createWithView(activity, "This is another title",
-                    R.layout.test_dialog_view, false, negText, posText, this::negativeClick, this::positiveClick)
+            val d = UnisonDialog.createWithView(activity, R.string.test_title,
+                    R.layout.test_dialog_view, false, R.string.test_negative_button, R.string.test_positive_button, this::negativeClick, this::positiveClick)
 
             d.show()
         })
@@ -74,11 +70,11 @@ class FragmentDialogs: Fragment() {
     }
 
 
-    fun negativeClick() {
+    private fun negativeClick() {
         Toast.makeText(activity, "Negative click", Toast.LENGTH_SHORT).show()
     }
 
-    fun positiveClick() {
+    private fun positiveClick() {
         Toast.makeText(activity, "Positive click", Toast.LENGTH_SHORT).show()
     }
 

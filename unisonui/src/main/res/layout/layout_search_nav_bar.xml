@@ -37,7 +37,7 @@
             android:textColorHint="@color/mid_grey_1"
             android:textSize="14sp"
             android:textColor="@color/black"
-            android:hint="Search"/>
+            android:hint="@string/search"/>
 
         <ImageButton
             android:id="@+id/search_mic"

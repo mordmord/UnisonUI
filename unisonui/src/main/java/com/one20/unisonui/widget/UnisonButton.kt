@@ -2,6 +2,7 @@ package com.one20.unisonui.widget
 
 import android.content.Context
 import android.graphics.Typeface
+import android.support.v7.widget.AppCompatButton
 import android.util.AttributeSet
 import android.widget.Button
 import com.one20.unisonui.util.FontUtil
@@ -22,7 +23,7 @@ private const val VERTICAL_PADDING      = 10
 /**
  * Button styled with One20 styling
  */
-class UnisonButton : Button {
+class UnisonButton : AppCompatButton {
 
     /**
      * Application context

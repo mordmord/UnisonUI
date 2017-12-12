@@ -37,7 +37,7 @@ class FragmentSnackbar: Fragment() {
 
 
         button.setOnClickListener {
-            UnisonSnackBar.makeAndShow(view, textEdit.getText().toString(), UnisonSnackBar.LENGTH_LONG)
+            UnisonSnackBar.make(view, textEdit.getText().toString(), UnisonSnackBar.LENGTH_LONG).show()
         }
 
 

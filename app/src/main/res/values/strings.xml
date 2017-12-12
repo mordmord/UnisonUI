@@ -5,4 +5,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="test_message_body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna wirl aliqua. Up exlaborum incididunt.</string>
+    <string name="test_negative_button">Negative</string>
+    <string name="test_positive_button">Positive</string>
+    <string name="test_title">Test Title</string>
 </resources>

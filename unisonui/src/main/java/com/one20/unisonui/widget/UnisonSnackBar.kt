@@ -1,7 +1,9 @@
 package com.one20.unisonui.widget
 
 import android.support.design.widget.Snackbar
+import android.support.v4.content.ContextCompat
 import android.view.View
+import com.one20.unisonui.R
 
 /**
  * Class for creating styled dialog instances
@@ -30,33 +32,6 @@ class UnisonSnackBar {
 
 
         /**
-         * Create and show SnackBar
-         *
-         * @param   v           Root view
-         * @param   message     Message to show
-         * @param   duration    Length to show
-         */
-        fun makeAndShow(v: View, message: CharSequence, duration: Int) {
-            Snackbar.make(v, message, duration).show()
-        }
-
-        /**
-         * Create and show SnackBar with action
-         *
-         * @param   v           Root view
-         * @param   message     Message to show
-         * @param   duration    Show duration
-         * @param   listener    Callback to notify of action click event
-         * @param   action      Action button string resource
-         */
-        fun makeAndShow(v: View, message: CharSequence, duration: Int, listener: View.OnClickListener, action: Int) {
-            val s = Snackbar.make(v, message, duration)
-            s.setAction(action, listener)
-            s.show()
-        }
-
-
-        /**
          * Create and return SnackBar
          *
          * @param   v           Root view
@@ -66,7 +41,10 @@ class UnisonSnackBar {
          * @return  Properly formatted SnackBar instance
          */
         fun make(v: View, message: CharSequence, duration: Int): Snackbar {
-            return Snackbar.make(v, message, duration)
+            var snackbar = Snackbar.make(v, message, duration)
+            snackbar.setActionTextColor(ContextCompat.getColor(v.context, R.color.yellow))
+
+            return snackbar
         }
 
         /**
@@ -83,6 +61,8 @@ class UnisonSnackBar {
         fun make(v: View, message: CharSequence, duration: Int, listener: View.OnClickListener, action: Int): Snackbar {
             val s = Snackbar.make(v, message, duration)
             s.setAction(action, listener)
+            s.setActionTextColor(ContextCompat.getColor(v.context, R.color.yellow))
+
             return s
         }
 

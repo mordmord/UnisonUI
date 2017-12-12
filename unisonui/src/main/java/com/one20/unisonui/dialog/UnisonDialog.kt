@@ -1,9 +1,13 @@
 package com.one20.unisonui.dialog
 
-import android.app.AlertDialog
 import android.content.Context
+import android.os.Build
+import android.support.annotation.StringRes
+import android.support.v7.app.AlertDialog
 import android.view.View
 import com.one20.unisonui.R
+import org.jetbrains.annotations.NotNull
+import kotlin.reflect.KFunction0
 
 /**
  * Class for creating styled dialog instances
@@ -29,31 +33,34 @@ class UnisonDialog {
          * @param   negativeClicked Callback method for negative click
          * @param   positiveClicked Callback method for positive click
          */
-        fun create(
-                context: Context,
-                message: String,
+        fun create(@NotNull context: Context,
+                @StringRes message: Int,
                 dark: Boolean,
-                negativeButton: String,
-                positiveButton: String,
-                negativeClicked: () -> Unit,
-                positiveClicked: () -> Unit
+                @StringRes negativeButton: Int,
+                @StringRes positiveButton: Int,
+                negativeClicked: KFunction0<Unit>,
+                positiveClicked: KFunction0<Unit>
         ): AlertDialog {
 
             val style = if(dark) R.style.UnisonAlertDialog_Dark else R.style.UnisonAlertDialog_Light
 
-            val d = AlertDialog.Builder(context, style).create()
+            val d = AlertDialog.Builder(context, style)
+                    .setMessage(context.getString(message))
+                    .create()
 
-            d.setMessage(message)
-            d.setButton(AlertDialog.BUTTON_NEGATIVE, negativeButton, { _, _ ->
+            d.setButton(AlertDialog.BUTTON_NEGATIVE, context.getString(negativeButton), { _, _ ->
                 negativeClicked()
             })
-            d.setButton(AlertDialog.BUTTON_POSITIVE, positiveButton, { _, _ ->
+            d.setButton(AlertDialog.BUTTON_POSITIVE, context.getString(positiveButton), { _, _ ->
                 positiveClicked()
             })
 
-            d.create()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                d.create()
+                d.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(android.support.v4.content.ContextCompat.getColor(context, negativeButtonColor))
+            }
+
             d.window.attributes.windowAnimations = style
-            d.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(android.support.v4.content.ContextCompat.getColor(context, negativeButtonColor))
 
             return d
         }
@@ -75,31 +82,35 @@ class UnisonDialog {
          */
         fun createWithTitle(
                 context: Context,
-                title: String,
-                message: String,
+                @StringRes title: Int,
+                @StringRes message: Int,
                 dark: Boolean,
-                negativeButton: String,
-                positiveButton: String,
+                @StringRes negativeButton: Int,
+                @StringRes positiveButton: Int,
                 negativeClicked: () -> Unit,
                 positiveClicked: () -> Unit
         ): AlertDialog {
 
             val style = if(dark) R.style.UnisonAlertDialog_Dark else R.style.UnisonAlertDialog_Light
 
-            val d = AlertDialog.Builder(context, style).create()
-            d.setTitle(title)
+            val d = AlertDialog.Builder(context, style)
+                    .setTitle(title)
+                    .setMessage(context.getString(message))
+                    .create();
 
-            d.setMessage(message)
-            d.setButton(AlertDialog.BUTTON_NEGATIVE, negativeButton, { _, _ ->
+            d.setButton(AlertDialog.BUTTON_NEGATIVE, context.getString(negativeButton), { _, _ ->
                 negativeClicked()
             })
-            d.setButton(AlertDialog.BUTTON_POSITIVE, positiveButton, { _, _ ->
+            d.setButton(AlertDialog.BUTTON_POSITIVE, context.getString(positiveButton), { _, _ ->
                 positiveClicked()
             })
 
-            d.create()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                d.create()
+                d.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(android.support.v4.content.ContextCompat.getColor(context, negativeButtonColor))
+            }
+
             d.window.attributes.windowAnimations = style
-            d.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(android.support.v4.content.ContextCompat.getColor(context, negativeButtonColor))
 
             return d
         }
@@ -120,11 +131,11 @@ class UnisonDialog {
          */
         fun createWithView(
                 context: Context,
-                title: String,
+                @StringRes title: Int,
                 view: Int,
                 dark: Boolean,
-                negativeButton: String,
-                positiveButton: String,
+                @StringRes negativeButton: Int,
+                @StringRes positiveButton: Int,
                 negativeClicked: () -> Unit,
                 positiveClicked: () -> Unit
         ): AlertDialog {
@@ -149,32 +160,35 @@ class UnisonDialog {
          */
         fun createWithView(
                 context: Context,
-                title: String,
+                @StringRes title: Int,
                 view: View,
                 dark: Boolean,
-                negativeButton: String,
-                positiveButton: String,
+                @StringRes negativeButton: Int,
+                @StringRes positiveButton: Int,
                 negativeClicked: () -> Unit,
                 positiveClicked: () -> Unit
         ): AlertDialog {
 
             val style = if(dark) R.style.UnisonAlertDialog_Dark else R.style.UnisonAlertDialog_Light
 
-            val d = AlertDialog.Builder(context, style).create()
-            d.setTitle(title)
+            val d = AlertDialog.Builder(context, style)
+                    .setTitle(title)
+                    .setView(view)
+                    .create()
 
-            d.setView(view)
-
-            d.setButton(AlertDialog.BUTTON_NEGATIVE, negativeButton, { _, _ ->
+            d.setButton(AlertDialog.BUTTON_NEGATIVE, context.getString(negativeButton), { _, _ ->
                 negativeClicked()
             })
-            d.setButton(AlertDialog.BUTTON_POSITIVE, positiveButton, { _, _ ->
+            d.setButton(AlertDialog.BUTTON_POSITIVE, context.getString(positiveButton), { _, _ ->
                 positiveClicked()
             })
 
-            d.create()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                d.create()
+                d.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(android.support.v4.content.ContextCompat.getColor(context, negativeButtonColor))
+            }
+
             d.window.attributes.windowAnimations = style
-            d.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(android.support.v4.content.ContextCompat.getColor(context, negativeButtonColor))
 
             return d
         }
