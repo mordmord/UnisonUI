@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_enabled="false" android:drawable="@drawable/background_button_raised_yellow_disabled"/>
-    <item android:state_pressed="true" android:drawable="@color/ripple_color"/>
     <item android:drawable="@drawable/background_button_raised_yellow_enabled"/>
 </selector>
