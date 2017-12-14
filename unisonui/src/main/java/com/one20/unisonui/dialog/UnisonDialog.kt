@@ -12,7 +12,7 @@ import kotlin.reflect.KFunction0
 /**
  * Class for creating styled dialog instances
  */
-class UnisonDialog {
+class UnisonDialogBuilder {
 
     companion object {
 
