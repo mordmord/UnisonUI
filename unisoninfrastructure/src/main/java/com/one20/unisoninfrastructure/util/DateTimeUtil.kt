@@ -1,4 +1,4 @@
-package com.one20.unisoninfrastructure
+package com.one20.unisoninfrastructure.util
 
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
