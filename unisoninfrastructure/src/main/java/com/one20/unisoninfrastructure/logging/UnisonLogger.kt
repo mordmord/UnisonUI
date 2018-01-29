@@ -46,7 +46,7 @@ open class UnisonLogger: AbstractLogger() {
 
         private var loggers: ArrayList<AbstractLogger> = ArrayList()
 
-        fun initialize(logger: UnisonLogger) {
+        fun initialize(logger: AbstractLogger) {
             loggers.add(logger)
         }
 
@@ -91,6 +91,15 @@ open class UnisonLogger: AbstractLogger() {
                 it.log(LEVEL_WARN, throwable)
             }
         }
+
+        fun file(message: String) {
+            loggers.forEach {
+                if(it is UnisonFileLogger) {
+                    it.log(LEVEL_DEBUG, message)
+                }
+            }
+        }
+
     }
 
 }
