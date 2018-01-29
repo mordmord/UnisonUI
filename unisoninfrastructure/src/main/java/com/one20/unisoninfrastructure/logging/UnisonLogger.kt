@@ -40,9 +40,9 @@ open class UnisonLogger: AbstractLogger() {
 
     companion object {
 
-        private val LEVEL_ERROR = 0
-        private val LEVEL_DEBUG = 1
-        private val LEVEL_WARN  = 2
+        val LEVEL_ERROR = 0
+        val LEVEL_DEBUG = 1
+        val LEVEL_WARN  = 2
 
         private var loggers: ArrayList<AbstractLogger> = ArrayList()
 

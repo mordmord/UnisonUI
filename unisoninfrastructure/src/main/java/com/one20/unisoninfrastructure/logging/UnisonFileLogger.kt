@@ -8,7 +8,7 @@ import java.io.PrintWriter
 /**
  * Logger implementation for writing logs to a file
  */
-class UnisonFileLogger(filePath: String) : UnisonLogger() {
+open class UnisonFileLogger(filePath: String) : UnisonLogger() {
 
     /**
      * Path to local log file
