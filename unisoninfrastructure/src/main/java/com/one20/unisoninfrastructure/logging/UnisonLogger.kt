@@ -92,14 +92,6 @@ open class UnisonLogger: AbstractLogger() {
             }
         }
 
-        fun file(message: String) {
-            loggers.forEach {
-                if(it is UnisonFileLogger) {
-                    it.log(LEVEL_DEBUG, message)
-                }
-            }
-        }
-
     }
 
 }
