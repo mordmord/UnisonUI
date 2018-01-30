@@ -1,1 +1,1 @@
-include ':app', ':unisonui', ':unisoninfrastructure'
+include ':app', ':unisonui'

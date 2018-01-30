@@ -18,6 +18,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    dexOptions {
+        preDexLibraries = false
+    }
 }
 
 dependencies {
@@ -37,7 +40,7 @@ dependencies {
     //  ESPRESSO
     androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
     androidTestCompile 'com.android.support.test:runner:1.0.1'
-    implementation project(':unisoninfrastructure')
+
 }
 repositories {
     mavenCentral()
