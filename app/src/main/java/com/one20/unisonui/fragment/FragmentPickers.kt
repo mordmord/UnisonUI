@@ -9,7 +9,6 @@ import android.widget.DatePicker
 import android.widget.TimePicker
 import com.one20.one20ui.R
 import com.one20.one20ui.activity.BaseActivity
-import com.one20.unisoninfrastructure.logging.UnisonLogger
 import com.one20.unisonui.widget.UnisonButton
 import com.one20.unisonui.widget.UnisonPicker
 

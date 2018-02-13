@@ -10,6 +10,7 @@
         <attr name="headerLabel" format="string"/>
         <attr name="multiline" format="boolean"/>
         <attr name="android:inputType"/>
+        <attr name="alphanumeric" format="boolean"/>
     </declare-styleable>
 
     

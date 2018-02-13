@@ -2,8 +2,9 @@ package com.one20.unisonui.widget
 
 import android.content.Context
 import android.support.design.widget.TextInputEditText
-import android.text.Editable
-import android.text.TextWatcher
+import android.text.*
+import android.text.method.DigitsKeyListener
+import android.text.method.KeyListener
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,11 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.one20.unisonui.R
+import java.util.Locale.filter
+import android.text.Spanned
+import android.text.InputFilter
+import android.util.Log
+
 
 /**
  * One20 styled edit text
@@ -19,34 +25,24 @@ import com.one20.unisonui.R
 class UnisonEditText(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
 
     /**
-     * Application context
-     */
-    private var mContext: Context = context
-
-    /**
-     * AttributeSet
-     */
-    private var mAttrs: AttributeSet = attrs
-
-    /**
      * Header label text view
      */
-    private var mHeaderLabel: TextView
+    private var headerLabel: TextView
 
     /**
      * Edit TextView
      */
-    private var mEditText: TextInputEditText
+    private var editText: TextInputEditText
 
     /**
      * Error text TextView
      */
-    private var mErrorText: TextView
+    private var errorText: TextView
 
     /**
      * Error icon ImageView
      */
-    private var mErrorIcon: ImageView
+    private var errorIcon: ImageView
 
     /**
      * Holds error enabled state. True for error showing, false otherwise
@@ -59,13 +55,14 @@ class UnisonEditText(context: Context, attrs: AttributeSet) : LinearLayout(conte
      * Initialize and format view
      */
     init {
-        val a = context.obtainStyledAttributes(mAttrs, R.styleable.UnisonEditText, 0, 0)
+        val a = context.obtainStyledAttributes(attrs, R.styleable.UnisonEditText, 0, 0)
         val hint: String?
         val text: String?
         val errorText: String?
         val headerText: String?
         val multiline: Boolean?
         val inputType: Int?
+        val alphanumeric: Boolean
 
         try {
             val dark = a.getBoolean(R.styleable.UnisonEditText_dark, false)
@@ -76,12 +73,13 @@ class UnisonEditText(context: Context, attrs: AttributeSet) : LinearLayout(conte
             headerText      = a.getNonResourceString(R.styleable.UnisonEditText_headerLabel)
             multiline       = a.getBoolean(R.styleable.UnisonEditText_multiline, false)
             inputType       = a.getInt(R.styleable.UnisonEditText_android_inputType, EditorInfo.TYPE_TEXT_FLAG_AUTO_CORRECT)
+            alphanumeric    = a.getBoolean(R.styleable.UnisonEditText_alphanumeric, false)
             mErrorEnabled   = a.getBoolean(R.styleable.UnisonEditText_errorEnabled, false)
 
             if(dark) {
-                LayoutInflater.from(mContext).inflate(R.layout.widget_single_line_edittext_dark, this, true)
+                LayoutInflater.from(context).inflate(R.layout.widget_single_line_edittext_dark, this, true)
             } else {
-                LayoutInflater.from(mContext).inflate(R.layout.widget_single_line_edittext, this, true)
+                LayoutInflater.from(context).inflate(R.layout.widget_single_line_edittext, this, true)
             }
 
         } finally {
@@ -89,21 +87,42 @@ class UnisonEditText(context: Context, attrs: AttributeSet) : LinearLayout(conte
         }
 
         //Find views
-        mHeaderLabel    = findViewById(R.id.header_label)
-        mEditText       = findViewById(R.id.textInputEditText)
-        mErrorText      = findViewById(R.id.error_text)
-        mErrorIcon      = findViewById(R.id.error_icon)
+        headerLabel = findViewById(R.id.header_label)
+        editText = findViewById(R.id.textInputEditText)
+        this.errorText = findViewById(R.id.error_text)
+        errorIcon = findViewById(R.id.error_icon)
 
 
         //Format views
-        mHeaderLabel.text = headerText
+        headerLabel.text = headerText
 
-        mEditText.hint = hint
-        mEditText.setText(text)
-        mEditText.setSingleLine(!multiline!!)
-        mEditText.inputType = inputType!!
+        editText.hint = hint
+        editText.setText(text)
+        multiline.let {
+            editText.setSingleLine(!multiline!!)
+        }
+        inputType.let {
+            editText.inputType = inputType!!
+        }
 
-        mErrorText.text = errorText
+        if(alphanumeric) {
+            editText.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+            val filter =  InputFilter { source, _, end, _, _, _ ->
+                try {
+                    val c = source[end-1]
+                    return@InputFilter if (Character.isLetter(c) || Character.isDigit(c)) {
+                        source
+                    } else {
+                        ""
+                    }
+                } catch (e: Exception) {
+                }
+                null
+            }
+            editText.filters = arrayOf(filter)
+        }
+
+        this.errorText.text = errorText
         setErrorEnabled(mErrorEnabled)
     }
 
@@ -116,10 +135,10 @@ class UnisonEditText(context: Context, attrs: AttributeSet) : LinearLayout(conte
     fun setErrorEnabled(enabled: Boolean) {
         mErrorEnabled = enabled
 
-        mEditText.isActivated = enabled
+        editText.isActivated = enabled
 
-        mErrorText.visibility = if(mErrorEnabled) { View.VISIBLE } else { View.INVISIBLE }
-        mErrorIcon.visibility = if(mErrorEnabled) { View.VISIBLE } else { View.INVISIBLE }
+        errorText.visibility = if(mErrorEnabled) { View.VISIBLE } else { View.INVISIBLE }
+        errorIcon.visibility = if(mErrorEnabled) { View.VISIBLE } else { View.INVISIBLE }
     }
 
 
@@ -128,7 +147,7 @@ class UnisonEditText(context: Context, attrs: AttributeSet) : LinearLayout(conte
      * @return text currently in the edit text
      */
     fun getText(): Editable {
-        return mEditText.text
+        return editText.text
     }
 
     /**
@@ -137,12 +156,12 @@ class UnisonEditText(context: Context, attrs: AttributeSet) : LinearLayout(conte
      * @param text  String to show
      */
     fun setText(text: String) {
-        mEditText.setText(text)
+        editText.setText(text)
     }
 
 
     fun setTextChangeListener(watcher: TextWatcher) {
-        mEditText.addTextChangedListener(watcher)
+        editText.addTextChangedListener(watcher)
     }
 
 
