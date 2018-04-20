@@ -22,6 +22,6 @@ class PDFDisplayActivity: AppCompatActivity() {
         supportActionBar?.title = "PDF View"
 
         var pdfView = this.findViewById<UnisonPDFView>(R.id.pdfView)
-        pdfView.showPdfAsset("testpdf.pdf")
+        pdfView.showPdfAsset("cabcard-v2.pdf")
     }
 }

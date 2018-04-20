@@ -44,8 +44,6 @@ class FragmentButtons: Fragment() {
         this.activity = getActivity() as BaseActivity
     }
 
-
-
     companion object {
         fun newInstance(): FragmentButtons {
             var frag = FragmentButtons()
