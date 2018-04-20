@@ -83,6 +83,14 @@
                 android:enabled="false"
                 style="@style/UnisonFlatButton.Light"/>
 
+            <com.one20.unisonui.widget.UnisonButton
+                android:id="@+id/showPDF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Show PDF"
+                style="@style/UnisonFlatButton.Light"/>
+
         </LinearLayout>
 
 

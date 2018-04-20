@@ -48,6 +48,10 @@ dependencies {
     //  AUTOFIT TEXTVIEW
     compile 'me.grantland:autofittextview:0.2.1'
 
+    //  PDF Viewer
+    compile 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+
 }
 repositories {
     mavenCentral()

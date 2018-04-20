@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.one20.unisonui.activity.PDFDisplayActivity"/>
     </application>
 
 </manifest>
