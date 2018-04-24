@@ -34,6 +34,7 @@
 
     <style name="UnisonToolbar.Dark">
         <item name="android:background">@color/toolbar_black</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back</item>
     </style>
 
     <style name="UnisonToolbar.Light">

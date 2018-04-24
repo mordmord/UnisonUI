@@ -19,10 +19,10 @@ import com.one20.one20ui.fragment.*
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     // Toolbar items
-    lateinit var mToolbar: Toolbar
-    lateinit var mDrawerLayout: DrawerLayout
-    lateinit var mDrawerToggle: ActionBarDrawerToggle
-    lateinit var mNavigationView: NavigationView
+    lateinit var toolbar: Toolbar
+    lateinit var drawerLayout: DrawerLayout
+    lateinit var drawerToggle: ActionBarDrawerToggle
+    lateinit var navigationView: NavigationView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,16 +31,16 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
 
         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 0)
 
-        mToolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(mToolbar)
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
-        mDrawerLayout = findViewById(R.id.drawer_layout)
-        mDrawerToggle = ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        mDrawerLayout.addDrawerListener(mDrawerToggle)
-        mDrawerToggle.syncState()
+        drawerLayout = findViewById(R.id.drawer_layout)
+        drawerToggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        drawerLayout.addDrawerListener(drawerToggle)
+        drawerToggle.syncState()
 
-        mNavigationView = findViewById(R.id.nav_view)
-        mNavigationView.setNavigationItemSelectedListener(this)
+        navigationView = findViewById(R.id.nav_view)
+        navigationView.setNavigationItemSelectedListener(this)
 
         launchFragment(FragmentButtons.newInstance())
 
@@ -49,8 +49,8 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
 
 
     override fun onBackPressed() {
-        if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
-            mDrawerLayout.closeDrawer(GravityCompat.START)
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
         }
@@ -79,7 +79,7 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             R.id.fragment_progress  ->  launchFragment(FragmentProgress.newInstance())
         }
 
-        mDrawerLayout.closeDrawer(GravityCompat.START)
+        drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
 
