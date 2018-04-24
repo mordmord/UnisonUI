@@ -1,8 +1,10 @@
 package com.one20.unisonui.widget
 
 import android.content.Context
+import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import com.github.barteksc.pdfviewer.PDFView
+import com.one20.unisonui.R
 
 /**
  * View used to render PDF assets.
@@ -15,6 +17,12 @@ class UnisonPDFView(context: Context, attributeSet: AttributeSet): PDFView(conte
      * Name of the PDF Asset currently loaded
      */
     private var assetName: String = ""
+
+
+    init {
+        background = ContextCompat.getDrawable(context, R.color.mid_grey_2)
+    }
+
 
     /**
      * Load and show a PDF into the view.
